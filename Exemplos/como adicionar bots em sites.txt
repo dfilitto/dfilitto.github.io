@@ -1,0 +1,16 @@
+//como criar um site no github
+https://youtu.be/a_LZkjhDVc0
+
+//github botpress
+https://github.com/botpress/botpress
+
+//heroku
+https://id.heroku.com/login
+
+//como criar bots para sites utilizando o botpress
+
+//script para adicionar nos site para que o mesmo utilize o bot criado no heroku
+<script src="https://<nomedasuaaplicação>.herokuapp.com/assets/modules/channel-web/inject.js"></script>
+<script>
+window.botpressWebChat.init({ host: 'https://<nomedasuaaplicação>.herokuapp.com/', botId: '<nomedobot>' })
+</script>

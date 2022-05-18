@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />   
+    <script src="./script.js" defer></script>
+    <title>Sorteador de números</title>
+    
+</head>
+<body>
+    <header>
+        <h1 id="titulo">SORTEADOR DE NÚMEROS</h1>
+    </header>
+    <main>
+        <section>
+            <p>Sortear <input type="number" name="qtde" id="qtde" /> </p>
+            <p>entre <input type="number" name="min" id="min" /> e 
+                <input type="number" name="max" id="max" /></p>
+    
+            <p><button onclick="sortearNumero()">SORTEAR AGORA!!!</button></p>
+            <p>
+                <label for="revelar">
+                    <input type="checkbox" name="revelar" id="revelar" >visualizar números apenas ao clicar.
+                </label>
+            </p>
+        </section>
+        <section id="numeros">
+    
+        </section>
+    </main>
+</body>
+</html>

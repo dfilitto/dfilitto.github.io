@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+header{
+    padding: 1em;
+    min-height: 150px;
+    background-color: blue;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+header h1{
+    text-align: center;
+}
+
+main{
+    padding: 1em;
+    background-color: rgb(255, 60, 0);
+    max-width: 80%;
+    margin: 0 auto;
+}
+main p {
+    text-align: center;
+    font-size: x-large;
+    margin: 5px;
+}
+
+button{
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+}
+#numeros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.numero{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 100%;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+.numerorevel{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 100%;
+    background-color: cornflowerblue;
+    text-align: center;
+    color: cornflowerblue;
+} 
+
+

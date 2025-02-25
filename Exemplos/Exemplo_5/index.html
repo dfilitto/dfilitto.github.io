@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, suportando caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo -->
+    <title>Sobre Mim</title>
+    <link rel="stylesheet" href="./css/style.css"> <!-- Conecta o arquivo CSS externo -->
+</head>
+<body>
+
+    <!--
+        inline
+        <p style="color: blue; font-size: 16px;">Este é um parágrafo com estilo inline.</p>
+        Incorporado
+        <style>
+            p {
+                color: green;
+                font-size: 18px;
+            }
+        </style>
+    -->
+    <div class="container">
+        <!-- Área para a foto de perfil -->
+        <aside class="perfil">  
+            <img src="./img/foto.png" alt="Minha Foto"> <!-- Imagem do perfil -->
+        </aside>
+
+        <!-- Área de navegação e conteúdo -->
+        <section class="conteudo">
+            <nav>
+                <ul>
+                    <!-- Links que acionam a função JavaScript para exibir o conteúdo -->
+                    <li><a href="#" onclick="mostrarConteudo('home')">Home</a></li>
+                    <li>|</li>
+                    <li><a href="#" onclick="mostrarConteudo('portfolio')">Portfólio</a></li>
+                    <li>|</li>
+                    <li><a href="#" onclick="mostrarConteudo('contato')">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <hr class="linha-vermelha"> <!-- Linha vermelha separando o menu do conteúdo -->
+
+            <!-- Seções que serão alternadas com JavaScript -->
+            <article>
+                <div id="home" class="secao">
+                    <h2>Sobre Mim</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam. Amet volutpat consequat mauris nunc congue nisi. Tortor at risus viverra adipiscing at.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam. Amet volutpat consequat mauris nunc congue nisi. Tortor at risus viverra adipiscing at.
+                    </p>
+                </div>
+
+                <div id="portfolio" class="secao" style="display: none;">
+                    <h2>Portfólio</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam. Amet volutpat consequat mauris nunc congue nisi. Tortor at risus viverra adipiscing at.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam. Amet volutpat consequat mauris nunc congue nisi. Tortor at risus viverra adipiscing at.
+                    </p>
+                </div>
+
+                <div id="contato" class="secao" style="display: none;">
+                    <h2>Contato</h2>
+                    <p>E-mail: <a href="mailto:meuemail@email.com">meuemail@email.com</a></p>
+                    <p>Redes Sociais:</p>
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                    
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <script>
+        // Função que alterna a exibição das seções
+        function mostrarConteudo(secao) {
+            // Oculta todas as seções
+            document.querySelectorAll('.secao').forEach(el => el.style.display = 'none');
+            // Exibe apenas a seção selecionada
+            document.getElementById(secao).style.display = 'block';
+        }
+        /*
+            A linha document.querySelectorAll('.secao').forEach(el => el.style.display = 'none'); 
+            seleciona todas as seções da página com a classe .secao e percorre cada uma delas, 
+            ocultando-as ao definir display: none. Isso garante que todas as seções fiquem invisíveis 
+            antes de exibir a seção correta, que é mostrada em seguida com document.getElementById(secao).
+            style.display = 'block';
+        */
+    </script>
+
+</body>
+</html>

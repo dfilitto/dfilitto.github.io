@@ -1,0 +1,154 @@
+/* Reset básico para remover margens e definir uma fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    /*
+        box-sizing: border-box; faz com que o width e o height de um elemento incluam padding e border, 
+        evitando que seu tamanho total ultrapasse o valor definido. 
+    */
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Configuração do corpo da página */
+/* O body é transformado em um container flexível */
+body {
+    display: flex; /* Ativa o flexbox para organizar os elementos */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    height: 100vh; /* Faz o body ocupar toda a altura da tela */
+    /* Essa configuração garante que o conteúdo fique sempre centralizado na tela */
+}
+
+p, h2 {
+    margin-bottom: 15px;
+}
+
+/* Container principal, criando um efeito de "cartão" */
+.container {
+    display: flex; /* Permite organizar os elementos internos lado a lado */
+    width: 60%; /* Define uma largura fixa para o container */
+    background: white; /* Define um fundo branco */
+    padding: 20px; /* Adiciona um espaçamento interno */
+    border-radius: 10px; /* Arredonda os cantos do container */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Adiciona um efeito de sombra */
+    position: relative; /* Define uma posição de referência para elementos filhos */
+    transition: transform 0.3s ease-in-out; /* Adiciona um efeito suave de transformação */
+}
+
+/* Estilização da foto de perfil */
+.perfil {
+    width: 300px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.perfil img {
+    width: 100%;
+    border-radius: 50%; /* Foto em formato circular */
+}
+
+/* Ajuste do conteúdo ao lado direito */
+.conteudo {
+    flex: 1; /* Faz com que o conteúdo ocupe todo o espaço disponível */
+    display: flex; /* Permite organizar os elementos internos verticalmente */
+    flex-direction: column; /* Organiza os elementos em coluna */
+}
+
+.conteudo ul {
+    margin-left: 20px;
+}
+/* Estilização do menu de navegação */
+nav ul {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 24px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Cor padrão do texto */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f4b400; /* Cor ao passar o mouse */
+}
+
+/* Seções inicialmente ocultas */
+.secao {
+    display: none;
+}
+
+/* Exibir apenas a primeira seção por padrão */
+.secao:first-child {
+    display: block;
+}
+
+/* Estilização da linha vermelha */
+.linha-vermelha {
+    width: 100%; /* Ocupa toda a largura */
+    height: 4px; /* Espessura da linha */
+    background-color: red;
+    border: none;
+    margin: 20px 0;
+}
+
+/* Estilos para mobile (telas menores que 480px) 
+@media (max-width: 1400px*/
+
+/* Estilos para tablet (telas entre 481px e 768px) 
+@media (min-width: 481px) and (max-width: 768px)*/
+
+@media (max-width: 1400px) {
+    .container {
+        width: 60%; /* Ocupa toda a largura da tela */
+        flex-direction: column; /* Organiza os elementos em coluna */
+        justify-content: center; /* Centraliza os elementos horizontalmente */
+        align-items: center; /* Centraliza os elementos verticalmente */
+    }
+
+    .conteudo {
+        min-width: 70%;
+    }
+    .perfil {
+        width: 280px;
+        margin-right: 0; /* Remove margem à direita */
+        margin-bottom: 20px; /* Adiciona margem abaixo da foto */
+    }
+
+    /* Estilização do menu de navegação */
+    nav ul {
+        justify-content: center;
+    }
+
+}
+
+/* Estilos para tablet (telas entre 481px e 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        width: 90%; /* Ocupa toda a largura da tela */
+    }
+    .perfil {
+        width: 250px;
+    }
+}
+
+/* Estilos para tablet (telas entre 481px e 768px) */
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Ocupa toda a largura da tela */
+        border-radius: 0; /* Remove bordas arredondadas */
+        box-shadow: none; /* Remove sombra para melhorar a aparência em telas pequenas */
+    }
+    .perfil {
+        width: 250px;
+    }
+}
